@@ -1,17 +1,15 @@
-from pydantic import BaseModel
-from datetime import datetime
-from typing import Optional
+from pydantic import AwareDatetime, BaseModel
 
 
 class PostIn(BaseModel):
     title: str
     content: str
-    published: bool = True
-    published_at: Optional[datetime] = None
+    published_at: AwareDatetime | None = None
+    published: bool = False
 
 
-class PostUpdate(BaseModel):
-    title: Optional[str] = None
-    content: Optional[str] = None
-    published: Optional[bool] = None
-    published_at: Optional[datetime] = None
+class PostUpdateIn(BaseModel):
+    title: str | None = None
+    content: str | None = None
+    published_at: AwareDatetime | None = None
+    published: bool | None = None
