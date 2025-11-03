@@ -2,14 +2,11 @@
 name = "blog"
 version = "0.1.0"
 description = "API FastAPI para blog"
-authors = [
-    { name = "mlkrinski", email = "marcelokrinski@gmail.com" }
-]
+authors = ["mlkrinski <marcelokrinski@gmail.com>"]
 readme = "README.md"
 package-mode = false
-
-[project]
 requires-python = ">=3.12"
+
 dependencies = [
     "fastapi",
     "uvicorn[standard] (>=0.38.0,<0.39.0)",
@@ -17,13 +14,11 @@ dependencies = [
     "pyjwt"
 ]
 
-[dependency-groups]
-dev = [
-    "pytest (>=8.4.2,<9.0.0)",
-    "pytest-asyncio (>=1.2.0,<2.0.0)",
-    "httpx (>=0.28.1,<0.29.0)",
-    "pytest-mock (>=3.15.1,<4.0.0)"
-]
+[tool.poetry.group.dev.dependencies]
+pytest = ">=8.4.2,<9.0.0"
+pytest-asyncio = ">=1.2.0,<2.0.0"
+httpx = ">=0.28.1,<0.29.0"
+pytest-mock = ">=3.15.1,<4.0.0"
 
 [tool.pytest.ini_options]
 asyncio_mode = "auto"
