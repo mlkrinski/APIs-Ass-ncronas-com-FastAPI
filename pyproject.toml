@@ -1,11 +1,14 @@
-[project]
+[tool.poetry]
 name = "blog"
 version = "0.1.0"
-description = ""
+description = "API FastAPI para blog"
 authors = [
-    {name = "mlkrinski",email = "marcelokrinski@gmail.com"}
+    { name = "mlkrinski", email = "marcelokrinski@gmail.com" }
 ]
 readme = "README.md"
+package-mode = false
+
+[project]
 requires-python = ">=3.12"
 dependencies = [
     "fastapi",
@@ -28,4 +31,3 @@ asyncio_mode = "auto"
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
-
