@@ -9,7 +9,7 @@ packages = [{ include = "src", from = "." }]
 [tool.poetry.dependencies]
 python = "^3.12"
 fastapi = "*"
-uvicorn = { extras = ["standard"], version = "^0.38.0" }
+uvicorn  = "^0.38.0" 
 databases = { version = "*", extras = ["aiosqlite", "asyncpg"] }
 pyjwt = "*"
 psycopg2-binary = "*"
